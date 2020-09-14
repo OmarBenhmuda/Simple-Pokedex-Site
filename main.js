@@ -22,3 +22,50 @@ let baseSPD = [45, 60, 80, 65, 80, 100, 43, 58, 78, 45, 30, 70, 50, 35, 75, 56, 
 
 
 
+for (let i = 0; i < pokeNumber.length; i++) {
+    const pokemon = document.createElement("div");
+    pokemon.classList.add("content");
+
+    const pokeImg = document.createElement("img");
+    pokeImg.classList.add("pokemonIMG");
+    pokeImg.src = "images/" + (i + 1).toString() + ".png";
+
+    const pokemonHeader = document.createElement("h2");
+    pokemonHeader.textContent = "#" + pokeNumber[i] + " " + pokeNames[i];
+
+    const pokemonType = document.createElement("h3");
+    if (pokeType2[i] == null) {
+        pokemonType.textContent = pokeType1[i];
+    } else {
+        pokemonType.textContent = pokeType1[i] + " and " + pokeType2[i]
+    }
+
+    const statsHeader = document.createElement("h3");
+    statsHeader.textContent = "STATS";
+
+    const stats = document.createElement("p");
+    stats.textContent =
+        "Base HP: " + baseHP[i] + "\n" +
+        "Base ATK: " + baseATK[i] + "\n" +
+        "Base DEF: " + baseDEF[i] + "\n" +
+        "Base Sp. ATK: " + baseSpATK[i] + "\n" +
+        "Base Sp, DEF: " + baseSpDEF[i] + "\n" +
+        "Base SPD: " + baseSPD[i] + "\n";
+    stats.innerHTML = stats.innerHTML.replace(/\n\r?/g, '<br />');
+
+    pokemon.appendChild(pokeImg);
+    pokemon.appendChild(pokemonHeader);
+    pokemon.appendChild(pokemonType);
+    pokemon.appendChild(statsHeader);
+    pokemon.appendChild(stats);
+
+    document.body.appendChild(pokemon);
+}
+
+
+
+
+
+
+
+
