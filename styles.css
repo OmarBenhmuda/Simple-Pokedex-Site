@@ -1,0 +1,58 @@
+.header {
+    text-align: center;
+    background: #3b3b46;
+    padding: 25px;
+
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #3b3b46;
+    font-size: 20px;
+    color: lightgray;
+}
+
+.header h1 {
+    margin: 0;
+    color: white;
+    font-size: 60px;
+}
+
+.content {
+    background: #646478;
+    margin: 50px 400px;
+    padding: 20px 50px;
+    color: white;
+    line-height: 25px;
+}
+
+.content h2 {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    color: white;
+    font-size: 40px;
+}
+
+.content h3 {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 25px;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.pokemonIMG {
+    float: right;
+    vertical-align: center;
+    horiz-align: center;
+}
+
