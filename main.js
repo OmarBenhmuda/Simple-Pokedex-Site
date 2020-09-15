@@ -21,8 +21,14 @@ let baseSPD = [45, 60, 80, 65, 80, 100, 43, 58, 78, 45, 30, 70, 50, 35, 75, 56, 
 ];
 
 
+const divElement = document.createElement("div");
+const ul = document.createElement("ul");
+ul.classList.add("container");
+
+
 for (let i = 0; i < pokeNumber.length; i++) {
-    const pokemon = document.createElement("div");
+
+    const pokemon = document.createElement("li");
     pokemon.classList.add("content");
 
     const pokeImg = document.createElement("img");
@@ -53,17 +59,19 @@ for (let i = 0; i < pokeNumber.length; i++) {
     stats.innerHTML = stats.innerHTML.replace(/\n\r?/g, '<br />');
 
 
-
     pokemon.appendChild(pokemonHeader);
     pokemon.appendChild(pokemonType);
     pokemon.appendChild(statsHeader);
     pokemon.appendChild(stats);
     pokemon.appendChild(pokeImg);
 
+    ul.appendChild(pokemon);
 
-    document.body.appendChild(pokemon);
 
 }
+
+divElement.appendChild(ul);
+document.body.appendChild(divElement);
 
 
 
