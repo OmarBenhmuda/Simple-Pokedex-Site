@@ -19,11 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9447c7a6-b4ce-479c-8c98-ee217a03378b" name="Default Changelist" comment="fixed bugs with horizontal scroll">
+    <list default="true" id="9447c7a6-b4ce-479c-8c98-ee217a03378b" name="Default Changelist" comment="added search functionality to search for Pokemon by Name and by Number">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +100,7 @@
       <workItem from="1600367291005" duration="21000" />
       <workItem from="1600367341604" duration="3180000" />
       <workItem from="1600396485550" duration="816000" />
-      <workItem from="1600625871708" duration="9282000" />
+      <workItem from="1600625871708" duration="12274000" />
     </task>
     <task id="LOCAL-00001" summary="added a grid layout for pokemon divs">
       <created>1600198037972</created>
@@ -124,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600374444792</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added search functionality to search for Pokemon by Name and by Number">
+      <created>1600637289232</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600637289232</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +152,8 @@
     <MESSAGE value="added a grid layout for pokemon divs" />
     <MESSAGE value="change grid layout to horizontal scroller and used li's instead of div's to hold the pokemon" />
     <MESSAGE value="fixed bugs with horizontal scroll" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bugs with horizontal scroll" />
+    <MESSAGE value="added search functionality to search for Pokemon by Name and by Number" />
+    <option name="LAST_COMMIT_MESSAGE" value="added search functionality to search for Pokemon by Name and by Number" />
   </component>
   <component name="WindowStateProjectService">
     <state x="559" y="209" key="#Web_Browsers" timestamp="1600103414239">
@@ -249,11 +256,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="215" y="50" key="SettingsEditor/0.0.1536.824/-1600.86.1600.860@0.0.1536.824" timestamp="1600201112907" />
-    <state x="363" y="143" key="Vcs.Push.Dialog.v2" timestamp="1600374451700">
+    <state x="363" y="143" key="Vcs.Push.Dialog.v2" timestamp="1600637296057">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="363" y="143" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1600.86.1600.860@0.0.1536.824" timestamp="1600374451700" />
-    <state x="363" y="143" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600198054155" />
+    <state x="363" y="143" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600637296057" />
     <state x="585" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600183985816">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -263,6 +270,10 @@
     </state>
     <state x="428" y="188" key="run.anything.popup/0.0.1536.824/-1600.86.1600.860@0.0.1536.824" timestamp="1600106506165" />
     <state x="428" y="188" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1600628485738" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600639218417">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1600639218416" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
