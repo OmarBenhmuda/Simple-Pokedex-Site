@@ -20,7 +20,6 @@ let baseSpDEF = [65, 80, 100, 50, 65, 85, 64, 80, 105, 20, 25, 80, 20, 25, 80, 3
 let baseSPD = [45, 60, 80, 65, 80, 100, 43, 58, 78, 45, 30, 70, 50, 35, 75, 56, 71, 101, 72, 77
 ];
 
-
 const divElement = document.createElement("div");
 const ul = document.createElement("ul");
 ul.classList.add("container");
@@ -58,7 +57,6 @@ for (let i = 0; i < pokeNumber.length; i++) {
         "Base SPD: " + baseSPD[i] + "\n";
     stats.innerHTML = stats.innerHTML.replace(/\n\r?/g, '<br />');
 
-
     pokemon.appendChild(pokemonHeader);
     pokemon.appendChild(pokemonType);
     pokemon.appendChild(statsHeader);
@@ -66,8 +64,6 @@ for (let i = 0; i < pokeNumber.length; i++) {
     pokemon.appendChild(pokeImg);
 
     ul.appendChild(pokemon);
-
-
 }
 
 
@@ -75,138 +71,84 @@ divElement.appendChild(ul);
 document.body.appendChild(divElement);
 
 
-function searchNumber(str) {
-
+function searchNumberEnter(str) {
     if (event.key === 'Enter') {
         if (!(isNaN(str.value)) && str.value !== "" && parseInt(str.value) <= 20 && parseInt(str.value) >= 0) {
-            const searchWindow = window.open("", "", "width=1200,height=700");
-            searchWindow.document.write('<html lang=""><head><title></title><link rel="stylesheet" type="text/css" href="styles.css"></head><body>');
-
-            const divElement = searchWindow.document.createElement("div");
-            const ul = searchWindow.document.createElement("ul");
-            ul.classList.add("container");
-
-
+            let alertString = "";
             for (let i = 0; i < pokeNumber.length; i++) {
-
-
                 if (pokeNumber[i].toLowerCase().includes(str.value.toLowerCase())) {
-
-                    const pokemon = searchWindow.document.createElement("li");
-                    pokemon.classList.add("content");
-
-                    const pokeImg = searchWindow.document.createElement("img");
-                    pokeImg.classList.add("pokemonIMG");
-                    pokeImg.src = "images/" + (i + 1).toString() + ".png";
-
-                    const pokemonHeader = searchWindow.document.createElement("h2");
-                    pokemonHeader.textContent = "#" + pokeNumber[i] + " " + pokeNames[i];
-
-                    const pokemonType = searchWindow.document.createElement("h3");
                     if (pokeType2[i] == null) {
-                        pokemonType.textContent = pokeType1[i];
+                        alertString += pokeNumber[i] + " " + pokeNames[i] + "\n" + pokeType1[i] + "\n\n";
                     } else {
-                        pokemonType.textContent = pokeType1[i] + " and " + pokeType2[i]
+                        alertString += pokeNumber[i] + " " + pokeNames[i] + "\n" + pokeType1[i] + " + " + pokeType2[i] + "\n\n";
                     }
-
-                    const statsHeader = searchWindow.document.createElement("h3");
-                    statsHeader.textContent = "STATS";
-
-                    const stats = searchWindow.document.createElement("p");
-                    stats.textContent =
-                        "Base HP: " + baseHP[i] + "\n" +
-                        "Base ATK: " + baseATK[i] + "\n" +
-                        "Base DEF: " + baseDEF[i] + "\n" +
-                        "Base Sp. ATK: " + baseSpATK[i] + "\n" +
-                        "Base Sp, DEF: " + baseSpDEF[i] + "\n" +
-                        "Base SPD: " + baseSPD[i] + "\n";
-                    stats.innerHTML = stats.innerHTML.replace(/\n\r?/g, '<br />');
-
-
-                    pokemon.appendChild(pokemonHeader);
-                    pokemon.appendChild(pokemonType);
-                    pokemon.appendChild(statsHeader);
-                    pokemon.appendChild(stats);
-                    pokemon.appendChild(pokeImg);
-
-                    ul.appendChild(pokemon);
                 }
-
-
             }
-
-            divElement.appendChild(ul);
-            searchWindow.document.body.appendChild(divElement);
+            alert(alertString);
         } else {
             alert("Please Enter a NUMBER between 1-20!")
         }
-
-
     }
 }
 
-function searchName(str) {
+
+function searchNameEnter(str) {
     if (event.key === 'Enter') {
         if (isNaN(str.value) && str.value.length <= 20 && str.value.match(/^[A-Za-z]+$/)) {
-            const searchWindow = window.open("", "", "width=1200,height=700");
-            searchWindow.document.write('<html lang=""><head><title></title><link rel="stylesheet" type="text/css" href="styles.css"></head><body>');
-
-            const divElement = searchWindow.document.createElement("div");
-            const ul = searchWindow.document.createElement("ul");
-            ul.classList.add("container");
-
+            let alertString = "";
             for (let i = 0; i < pokeNumber.length; i++) {
                 if (pokeNames[i].toLowerCase().includes(str.value.toLowerCase())) {
-
-                    const pokemon = searchWindow.document.createElement("li");
-                    pokemon.classList.add("content");
-
-                    const pokeImg = searchWindow.document.createElement("img");
-                    pokeImg.classList.add("pokemonIMG");
-                    pokeImg.src = "images/" + (i + 1).toString() + ".png";
-
-                    const pokemonHeader = searchWindow.document.createElement("h2");
-                    pokemonHeader.textContent = "#" + pokeNumber[i] + " " + pokeNames[i];
-
-                    const pokemonType = searchWindow.document.createElement("h3");
                     if (pokeType2[i] == null) {
-                        pokemonType.textContent = pokeType1[i];
+                        alertString += pokeNumber[i] + " " + pokeNames[i] + "\n" + pokeType1[i] + "\n\n";
                     } else {
-                        pokemonType.textContent = pokeType1[i] + " and " + pokeType2[i]
+                        alertString += pokeNumber[i] + " " + pokeNames[i] + "\n" + pokeType1[i] + " + " + pokeType2[i] + "\n\n";
                     }
-
-                    const statsHeader = searchWindow.document.createElement("h3");
-                    statsHeader.textContent = "STATS";
-
-                    const stats = searchWindow.document.createElement("p");
-                    stats.textContent =
-                        "Base HP: " + baseHP[i] + "\n" +
-                        "Base ATK: " + baseATK[i] + "\n" +
-                        "Base DEF: " + baseDEF[i] + "\n" +
-                        "Base Sp. ATK: " + baseSpATK[i] + "\n" +
-                        "Base Sp, DEF: " + baseSpDEF[i] + "\n" +
-                        "Base SPD: " + baseSPD[i] + "\n";
-                    stats.innerHTML = stats.innerHTML.replace(/\n\r?/g, '<br />');
-
-
-                    pokemon.appendChild(pokemonHeader);
-                    pokemon.appendChild(pokemonType);
-                    pokemon.appendChild(statsHeader);
-                    pokemon.appendChild(stats);
-                    pokemon.appendChild(pokeImg);
-
-                    ul.appendChild(pokemon);
                 }
             }
-
-            divElement.appendChild(ul);
-            searchWindow.document.body.appendChild(divElement);
+            alert(alertString);
         } else {
             alert("Please enter a name containing only alphabets and less than 20 characters")
         }
-
     }
+}
 
+
+function numSearchClick() {
+    const str = document.getElementById("nameSearch");
+    if (!(isNaN(str.value)) && str.value !== "" && parseInt(str.value) <= 20 && parseInt(str.value) >= 0) {
+        let alertString = "";
+        for (let i = 0; i < pokeNumber.length; i++) {
+            if (pokeNumber[i].toLowerCase().includes(str.value.toLowerCase())) {
+                if (pokeType2[i] == null) {
+                    alertString += pokeNumber[i] + " " + pokeNames[i] + "\n" + pokeType1[i] + "\n\n";
+                } else {
+                    alertString += pokeNumber[i] + " " + pokeNames[i] + "\n" + pokeType1[i] + " + " + pokeType2[i] + "\n\n";
+                }
+            }
+        }
+        alert(alertString);
+    } else {
+        alert("Please Enter a NUMBER between 1-20!")
+    }
+}
+
+function nameSearchClick() {
+    const str = document.getElementById('numberSearch');
+    if (isNaN(str.value) && str.value.length <= 20 && str.value.match(/^[A-Za-z]+$/)) {
+        let alertString = "";
+        for (let i = 0; i < pokeNumber.length; i++) {
+            if (pokeNames[i].toLowerCase().includes(str.value.toLowerCase())) {
+                if (pokeType2[i] == null) {
+                    alertString += pokeNumber[i] + " " + pokeNames[i] + "\n" + pokeType1[i] + "\n\n";
+                } else {
+                    alertString += pokeNumber[i] + " " + pokeNames[i] + "\n" + pokeType1[i] + " + " + pokeType2[i] + "\n\n";
+                }
+            }
+        }
+        alert(alertString);
+    } else {
+        alert("Please enter a name containing only alphabets and less than 20 characters")
+    }
 }
 
 

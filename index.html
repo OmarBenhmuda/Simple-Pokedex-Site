@@ -13,12 +13,12 @@
     <h1>SE 3316 Lab 1: Pokédex</h1>
 </div>
 <div class="search">
-    <label>
-        <input type="text" placeholder="Pokémon number search..." id="nameSearch" onkeydown="searchNumber(this)"/>
-    </label>
-    <label>
-        <input type="text" placeholder="Pokémon name search..." id="numberSearch" onkeydown="searchName(this)"/>
-    </label>
+    <label for="nameSearch"></label><input id="nameSearch" type="text" placeholder="Pokémon number search..."
+                                           onkeyup="searchNumberEnter(this)"/>
+    <button type="button" onclick="numSearchClick()">Search</button>
+    <label for="numberSearch"></label><input id="numberSearch" type="text" placeholder="Pokémon name search..."
+                                             onkeyUp="searchNameEnter(this)"/>
+    <button type="button" onclick="nameSearchClick()">Search</button>
 </div>
 
 
