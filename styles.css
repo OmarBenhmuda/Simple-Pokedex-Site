@@ -1,21 +1,42 @@
+#resultsBanner {
+    color: #a05151;
+    margin-left: 80px;
+}
+
 .header {
     text-align: center;
     background: #3b3b46;
     padding: 25px;
 }
 
+.allContainer {
 
-.container {
     display: flex;
     margin-bottom: 100px;
     overflow-x: scroll;
     overflow-y: hidden;
 }
 
-.content {
+.searchContainer {
+    display: flex;
+    margin-bottom: 100px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    }
+
+.allContent {
     margin: 10px;
     text-align: center;
     background: #646478;
+    color: white;
+    line-height: 25px;
+    border-radius: 50px;
+}
+
+.searchContent {
+    margin: 10px;
+    text-align: center;
+    background: #9a3a3a;
     color: white;
     line-height: 25px;
     border-radius: 50px;
